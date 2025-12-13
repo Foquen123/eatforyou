@@ -175,12 +175,10 @@ html {
   position: relative;
 
   background-color: black;
-  background-image: url("../images/backgound-desk.webp");
+  /* background-image: url("../images/backgound-desk.webp");
   background-position: center center;
   background-size: cover;
-  /* или contain */
-  background-repeat: no-repeat;
-  /* Если нужен параллакс-эффект */
+  background-repeat: no-repeat; */
 
 }
 
@@ -194,7 +192,6 @@ html {
   background-size: 100% 100%;
   z-index: 1;
   background-repeat: no-repeat;
-
 }
 
 .container {
