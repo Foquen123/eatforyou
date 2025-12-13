@@ -173,10 +173,10 @@ html {
   position: relative;
 
   background-color: black;
-  background-image: url("../images/backgound-desk.webp");
+  /* background-image: url("../images/backgound-desk.webp");
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 
 }
 
