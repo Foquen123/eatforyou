@@ -167,7 +167,7 @@ html {
   position: relative;
 
   background-color: black;
-  background-image: url("../images/backgound-desk.png");
+  background-image: url("../images/backgound-desk.webp");
   background-position: center center;
   background-size: cover;
   /* или contain */
