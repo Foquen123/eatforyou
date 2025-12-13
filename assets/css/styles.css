@@ -93,8 +93,6 @@ a {
 }
 
 
-
-
 /* ===================================== FONTS ===================================== */
 /* ===================================== FONTS ===================================== */
 
@@ -184,14 +182,14 @@ html {
 
 .wrapper::before {
   /* content: ""; */
-  background-image: url("../images/backgound-desk.png");
+  /* background-image: url("../images/backgound-desk.png");
   background-position: 50% 50%;
   position: absolute;
   width: 2142px;
   height: 980px;
   background-size: 100% 100%;
   z-index: 1;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .container {
