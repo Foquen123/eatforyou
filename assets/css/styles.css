@@ -96,7 +96,7 @@ a {
 /* ===================================== FONTS ===================================== */
 /* ===================================== FONTS ===================================== */
 
-@font-face {
+/* @font-face {
   font-family: "Geist";
   src:
     local("Geist"),
@@ -142,7 +142,7 @@ a {
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 /* @import url('https://fonts.googleapis.com/css2?family=Geist:wght@500');
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@600');
