@@ -180,7 +180,7 @@ html {
 
 }
 
-.hero-bg {
+/* .hero-bg {
   background-color: black;
   position: absolute;
   top: 0;
@@ -188,9 +188,9 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* аналог background-size: cover */
+  аналог background-size: cover
   z-index: -1;
-}
+} */
 
 .wrapper::before {
   /* content: ""; */
