@@ -12,30 +12,3 @@ accordeonHead.addEventListener('click', () => {
     content.style.maxHeight = content.scrollHeight + 'px'
   }
 })
-
-
-// document.querySelectorAll('.main__acc').forEach((headBtn) => {
-//   headBtn.addEventListener('click', () => {
-//     const headItem = headBtn.closest('.program__acc-item')
-//     const content = headBtn.nextElementSibling
-
-//     if (headItem.classList.contains('program__acc-item--active')) {
-//       headItem.classList.toggle('program__acc-item--active')
-//       content.style.maxHeight = '0px'
-//     }
-//     else {
-//       // close all another
-//       document.querySelectorAll('.program__acc-item').forEach((item) => {
-//         item.classList.remove('program__acc-item--active')
-
-//       })
-//       document.querySelectorAll('.program__acc-content').forEach((itemContent) => {
-//         itemContent.style.maxHeight = '0px'
-//       })
-
-
-//       headItem.classList.toggle('program__acc-item--active')
-//       content.style.maxHeight = content.scrollHeight + 'px'
-//     }
-//   })
-// })

@@ -144,10 +144,6 @@ a {
   font-display: swap;
 }
 
-/* @import url('https://fonts.googleapis.com/css2?family=Geist:wght@500');
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@600');
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap'); */
 
 /* ===================================== GENERAL ===================================== */
 /* ===================================== GENERAL ===================================== */
@@ -180,30 +176,6 @@ html {
 
 }
 
-/* .hero-bg {
-  background-color: black;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  аналог background-size: cover
-  z-index: -1;
-} */
-
-.wrapper::before {
-  /* content: ""; */
-  /* background-image: url("../images/backgound-desk.png");
-  background-position: 50% 50%;
-  position: absolute;
-  width: 2142px;
-  height: 980px;
-  background-size: 100% 100%;
-  z-index: 1;
-  background-repeat: no-repeat; */
-}
-
 .container {
   max-width: 1440px;
   padding: 0 20px;
@@ -212,10 +184,21 @@ html {
 }
 
 
-/* ===================================== HEADER ===================================== */
-/* ===================================== HEADER ===================================== */
+@media(max-height: 700px) {
+  .wrapper {
+    height: auto;
+  }
 
-.header {}
+  .main__inner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+;
+
+/* ===================================== HEADER ===================================== */
+/* ===================================== HEADER ===================================== */
 
 .header__logo {
   margin-top: 5px;
@@ -226,9 +209,7 @@ html {
 }
 
 @media(max-width: 850px) {
-  .header {
-    margin-bottom: 20px;
-  }
+
 
   .header__logo {
     margin-left: 19px;
@@ -247,8 +228,6 @@ html {
 /* ===================================== MAIN ===================================== */
 /* ===================================== MAIN ===================================== */
 
-.main {}
-
 .main__inner {
   display: flex;
   align-items: center;
@@ -260,21 +239,23 @@ html {
   margin-right: 30px;
 }
 
-.main__image-container {
-  border-radius: 20px;
-  width: 396px;
-  height: 198px;
+.main__poster-container {
   overflow: hidden;
+  max-width: 396px;
+  max-height: 198px;
+  border-radius: 20px;
   margin-bottom: 30px;
 }
 
-.main__image-container img {
-  width: 100%;
-  height: 100%;
+.main__poster-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
 }
 
 .main__title {
+  overflow-wrap: break-word;
   font-family: var(--second-family);
   font-weight: 600;
   font-size: clamp(30px, 2.1vw, 40px);
@@ -300,6 +281,29 @@ html {
   padding: 20px 140px;
   background: radial-gradient(62.3% 295.45% at 49.44% 50.76%, #bc1600 0%, rgba(56, 7, 0, 0) 81.44%, rgba(0, 0, 0, 0) 100%);
   white-space: nowrap;
+  position: relative;
+}
+
+.main__price::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  display: block;
+  background: radial-gradient(62.3% 295.45% at 49.44% 50.76%, #FF1D00 0%, rgba(56, 7, 0, 0) 81.44%, rgba(0, 0, 0, 0) 100%);
+}
+
+.main__price::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  display: block;
+  background: radial-gradient(62.3% 295.45% at 49.44% 50.76%, #FF1D00 0%, rgba(56, 7, 0, 0) 81.44%, rgba(0, 0, 0, 0) 100%);
 }
 
 .main__right {
@@ -314,8 +318,6 @@ html {
   display: flex;
   flex-direction: column;
 }
-
-.main__form-mail {}
 
 .main__form-mail-text {
   font-weight: 500;
@@ -376,20 +378,16 @@ html {
 }
 
 .main__form-checkbox-checked {
-  /* display: none; */
   position: absolute;
   top: 2px;
   left: 2px;
   width: 15px;
   height: 15px;
-
 }
 
 .main__form-checkbox-input:checked {
   background: #f91d00;
 }
-
-
 
 .main__form-checkboxk-text {
   font-weight: 500;
@@ -417,8 +415,6 @@ html {
   padding: 10px 10px 10px 15px;
   background: rgba(0, 0, 0, 0.05);
 }
-
-
 
 .main__acc-head {
   cursor: pointer;
@@ -458,6 +454,10 @@ html {
     height: auto;
   }
 
+  .main {
+    padding-top: 20px;
+  }
+
   .main__inner {
     flex-direction: column;
   }
@@ -470,11 +470,37 @@ html {
     margin-right: 0;
     max-width: 374px;
     margin-bottom: 50px;
+
+  }
+
+  .main__poster-container {
+    max-width: 374px;
+    max-height: 187px;
+    overflow: hidden;
+  }
+
+  .main__price {
+    white-space: wrap;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
   }
 
   .main__right {
     max-width: 374px;
     margin-bottom: 20px;
+  }
+}
+
+@media(max-width: 370px) {
+  .main__title {
+    font-size: 27px;
+  }
+}
+
+@media(max-width: 330px) {
+  .main__title {
+    font-size: 25px;
   }
 }
 
@@ -490,8 +516,6 @@ html {
   opacity: 0.7;
   display: block;
 }
-
-.container {}
 
 .footer__inner {
   display: flex;
